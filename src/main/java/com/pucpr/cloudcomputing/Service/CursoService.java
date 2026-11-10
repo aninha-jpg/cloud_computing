@@ -1,7 +1,5 @@
 package com.pucpr.cloudcomputing.Service;
 
-
-import com.pucpr.cloudcomputing.Entity.Aluno;
 import com.pucpr.cloudcomputing.Entity.Curso;
 import com.pucpr.cloudcomputing.Repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

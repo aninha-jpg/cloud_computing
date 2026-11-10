@@ -21,14 +21,39 @@ public class Pagamento {
 
     }
 
-    public Pagamento(PagamentoDTO data){
-        this.valor = data.valor();
-        this.matricula = data.matricula();
-        this.status = data.status();
+    public Pagamento(double valor, Matricula matricula, Status status){
+        this.valor = valor;
+        this.matricula = matricula;
+        this.status = status;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public double getValor() {
+        return valor;
+    }
 
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public Matricula getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Matricula matricula) {
+        this.matricula = matricula;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 }
 
 
