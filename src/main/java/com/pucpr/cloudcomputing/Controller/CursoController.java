@@ -1,9 +1,7 @@
 package com.pucpr.cloudcomputing.Controller;
 
-import com.pucpr.cloudcomputing.DTO.AlunoDTO;
+
 import com.pucpr.cloudcomputing.DTO.CursoDTO;
-import com.pucpr.cloudcomputing.DTO.MatriculaDTO;
-import com.pucpr.cloudcomputing.Entity.Aluno;
 import com.pucpr.cloudcomputing.Entity.Curso;
 import com.pucpr.cloudcomputing.Service.CursoService;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/curso")
 public class CursoController {
@@ -29,7 +28,7 @@ public class CursoController {
         return ResponseEntity.ok(new CursoDTO(cursoSalvo.getId(), cursoSalvo.getNome()));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping
     public ResponseEntity<List<CursoDTO>> ListarCursos(){
         List<CursoDTO> cursos = service.listarCursos()
                 .stream()
