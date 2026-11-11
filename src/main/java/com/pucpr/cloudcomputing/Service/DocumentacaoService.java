@@ -24,6 +24,10 @@ public class DocumentacaoService {
         return repository.existsByMatriculaId(id);
     }
 
+    public Documentacao findByMatriculaId(Long matriculaId) {
+        return repository.findByMatriculaId(matriculaId);
+    }
+
     public Documentacao verificarDocumentacao(DocumentacaoDTO data){
         if(repository.existsByMatriculaId(data.matriculaId())){
             return null;

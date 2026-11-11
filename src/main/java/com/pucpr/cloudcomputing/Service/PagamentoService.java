@@ -25,6 +25,10 @@ public class PagamentoService {
         return repository.existsByMatriculaId(matriculaId);
     }
 
+    public Pagamento findByMatriculaId(Long matriculaId) {
+        return repository.findByMatriculaId(matriculaId);
+    }
+
     public Pagamento verificarPagamento(PagamentoDTO data){
         if(repository.existsByMatriculaId(data.matriculaId())){
             return null;
