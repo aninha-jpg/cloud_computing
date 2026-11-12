@@ -1,0 +1,95 @@
+.curso {
+    min-height: 100vh;
+    padding: 100px 20px;
+    background: #F4F7FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curso-container {
+    width: 100%;
+    max-width: 650px;
+    background: #FFFFFF;
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(7, 26, 61, 0.08);
+}
+
+.curso-container span {
+    color: #3979E8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.curso-container h2 {
+    color: #071A3D;
+    font-size: 32px;
+    margin: 18px 0 10px;
+}
+
+.curso-container p {
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+.curso-container > button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    background: #3979E8;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.curso-container > button:hover {
+    background: #2865CC;
+    transform: translateY(-2px);
+}
+
+.curso-info {
+    margin-top: 20px;
+    padding: 22px;
+    background: #F4F7FC;
+    border-radius: 10px;
+}
+
+.curso-info h3 {
+    color: #071A3D;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.curso-info button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #3979E8;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.curso-info button:hover {
+    background: #2865CC;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .curso-container {
+        padding: 28px 20px;
+    }
+
+    .curso-container h2 {
+        font-size: 26px;
+    }
+}

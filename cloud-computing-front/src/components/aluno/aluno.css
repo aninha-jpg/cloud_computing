@@ -1,0 +1,97 @@
+.cadastro {
+    min-height: 100vh;
+    padding: 100px 20px;
+    background: #F4F7FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-container {
+    width: 100%;
+    max-width: 650px;
+    background: #FFFFFF;
+    padding: 45px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(7, 26, 61, 0.08);
+}
+
+.cadastro-etapa {
+    color: #3979E8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.cadastro-container h2 {
+    color: #071A3D;
+    font-size: 32px;
+    margin: 18px 0 10px;
+}
+
+.cadastro-container p {
+    color: #718096;
+    margin-bottom: 35px;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #071A3D;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 14px;
+    border: 1px solid #DCE3EF;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #3979E8;
+}
+
+.cadastro-button {
+    margin-top: 10px;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #3979E8;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cadastro-button:hover {
+    background: #2865CC;
+}
+
+@media (max-width: 600px) {
+    .cadastro-container {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}

@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://liberacaocredito-emdqguf3bkgzesfp.brazilsouth-01.azurewebsites.net")
 @RestController
 @RequestMapping("/pagamento")
 public class PagamentoController {

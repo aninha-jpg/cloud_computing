@@ -2,15 +2,12 @@ package com.pucpr.cloudcomputing.Controller;
 
 
 import com.pucpr.cloudcomputing.DTO.ContratoDTO;
-import com.pucpr.cloudcomputing.DTO.DocumentacaoDTO;
-import com.pucpr.cloudcomputing.Entity.Contrato;
-import com.pucpr.cloudcomputing.Entity.Documentacao;
 import com.pucpr.cloudcomputing.Service.ContratoService;
-import com.pucpr.cloudcomputing.Service.DocumentacaoService;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://liberacaocredito-emdqguf3bkgzesfp.brazilsouth-01.azurewebsites.net")
 @RestController
 @RequestMapping("/contrato")
 public class ContratoController {
@@ -28,6 +25,11 @@ public class ContratoController {
         if (contrato == null) {
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ok(contrato);
+        if (contrato.startsWith("Não foi possível")) {
+            return ResponseEntity.badRequest().body(contrato);
+        }
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_HTML)
+                .body(contrato);
     }
 }
